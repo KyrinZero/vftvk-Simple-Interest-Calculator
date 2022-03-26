@@ -74,6 +74,9 @@ function validate(principalVal, rateVal, yearsVal) {
   // Checks values are empty or not
   if (principalVal === "" || rateVal === "" || yearsVal === "") {
     alert("Enter a positive number");
+
+    // Focus on 'principal' input after alert
+    document.getElementById("principal").focus();
     return {
       isValid: false,
       principal: null,
@@ -91,6 +94,9 @@ function validate(principalVal, rateVal, yearsVal) {
     // Alert is shown if the number is zero or non-positive number
     if (principal <= 0) {
       alert("Enter a positive number");
+
+      // Focus on 'principal' input after alert
+      document.getElementById("principal").focus();
       return {
         isValid: false,
         principal: null,
